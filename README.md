@@ -15,3 +15,19 @@ node 类型
 git log<br>
 cd .git 进入本地仓库
 4. staged 暂存区 untracked file 未被追踪的文件(没有被写入暂存区)
+
+<hr>
+
+## GIT上传项目傻瓜式操作
+  - 如果是上传文件到新的仓库
+    1. github上先创建仓库
+    2. git clone
+    3. add commit push 三连
+
+  - 如果是上传项目到新的仓库
+    1. github上创建与项目同名的仓库(不要readme文件),如果创建了readme.md,要先拉取仓库的readme.md到本地 git pull --rebase origin master
+    2. 项目根目录上git init
+    3. git remote add origin + 仓库地址
+    4. git add .
+    5. git commit -m ""
+    6. git push -u origin master
